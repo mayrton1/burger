@@ -1,25 +1,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-               <br>
-                  <br>
+            <br>
+            <br>
             <h1 class="titleText">Eat Da Burger</h1>
             <br>
         </div>
     </div>
-  <div class="row">
+    <div class="row">
         <div class="col-12">
-            <center>   <img src = "/assets/img/burger.jpg" ></center>
+            <center> <img src="/assets/img/burger.jpg"></center>
 
 
-       <br>
-       <br>
+            <br>
+            <br>
         </div>
-    </div> 
+    </div>
 
 
 
-        <div class="row">
+    <div class="row">
         <div class="col-12 addBurger">
             <h3 class="miniHeading">add burgers</h3>
             <div class="moveMe">
@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <textarea type="text" name="burger_name"></textarea><br>
                         <button class="btn btn-warning" type="submit" style="background-color:beige;">add da burger!
-                            </button>
+                        </button>
                     </div>
             </div>
             </form>
@@ -60,18 +60,18 @@
                 {{#each burgers}}
                 {{#if this.devoured}}
                 <div class="devourBurger">
-                <p>
-                    {{this.burger_name}}</p>
-                <form action="/deleteOne/{{this.id}}" method="POST">
-                    <button type="submit" class="btn"
-                        style="background-color: #5DBCD2 ;">delete da burger! </button>
-                </form>
-                {{/if}}
-                {{/each}}
+                    <p>
+                        {{this.burger_name}}</p>
+                    <form action="/deleteOne/{{this.id}}" method="POST">
+                        <button type="submit" class="btn" style="background-color: #5DBCD2 ;">delete da burger!
+                        </button>
+                    </form>
+                    {{/if}}
+                    {{/each}}
             </ul>
-            </div>
         </div>
     </div>
-    <hr>
+</div>
+<hr>
 
 </div>

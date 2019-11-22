@@ -1,5 +1,5 @@
 var connection = require("./connection.js");
-//Select All ORM
+
 var orm = {
     selectAll: function(table, callback) {
         var queryString = "SELECT * FROM ??;";
@@ -8,7 +8,7 @@ var orm = {
             callback(res);
         });
     },
-    //Insert 
+  
     insertOne: function(gryffindor, hufflepuff, ravenclaw, callback) {
     var queryString = "INSERT INTO ?? (??) VALUES (?);"
         connection.query(queryString, [gryffindor, hufflepuff, ravenclaw], function(err, slytherin){
@@ -16,7 +16,7 @@ var orm = {
         callback(slytherin);
     });
     },
-    //Update
+    
     updateOne: function(colVal, id, callback) {
     var queryString = "UPDATE burgers SET devoured='1' WHERE " + id + ";";
         connection.query(queryString, [id], function(err, result) {
@@ -26,7 +26,7 @@ var orm = {
         callback(result);
         });
     },
-    //Delete
+    
     deleteOne: function(id, callback) {
         var queryString = "DELETE FROM burgers WHERE " + id + ";";
         connection.query(queryString, [id], function(err, res) {
@@ -35,5 +35,5 @@ var orm = {
         });
     },
 }
-//Exports ORM
+
 module.exports = orm;
