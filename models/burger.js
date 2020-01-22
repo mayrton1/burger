@@ -1,33 +1,24 @@
-
-var orm = require("../config/orm.js");                                                                 
-
+var orm = require("../config/orm.js");
 
 var burger = {
-    selectAll: function(callback) {                                         
-        orm.selectAll("burgers", function(res) {                            
-            callback(res);
-        });
-    },  
-
-  
-    insertOne: function (cheese, callback) {
-        orm.insertOne("burgers", "burger_name", cheese, function (buns) {
-            console.log("burgerJS cheese: ", cheese, "buns: ", buns);
-            callback(buns);
-        });
-    },
-    
-    updateOne: function(colVal, id, cb) {
-        orm.updateOne(colVal, id, function(res) {
-            cb(res);
-        });
-    },
-
-    deleteOne: function(id, callback) {
-        orm.deleteOne(id, function(res) {
-            callback(res);
-        });
-    }
+  all: function(cb) {
+    orm.all("burgers", function(res) {
+      cb(res);
+    });
+  },
+  create: function(name, cb) {
+    orm.create("burgers", [
+      "burger_name", "devoured"
+    ], [
+      name, false
+    ], cb);
+  },
+  update: function(id, cb) {
+    var condition = "id=" + id;
+    orm.update("burgers", {
+      devoured: true
+    }, condition, cb);
+  }
 };
 
 module.exports = burger;

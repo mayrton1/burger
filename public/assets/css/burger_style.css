@@ -1,64 +1,69 @@
 body {
-   
-    background-size: 100%;
-    background-color:	#00549D;
-}
-
-.titleText {
+    width: 99%;
+    height: 900px;
+    background-color: #fc6;
+  }
+  
+  #top-bar {
+    margin-top: 28px;
+  }
+  
+  .spacing-reset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  .list-reset {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: 0;
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 990px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 990px;
+    }
+  }
+  
+  .enter_section {
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
-    color: gold;
-    font-size: 100px;
-    font-family: 'Skranji', cursive;
-   
-}
-
-.miniHeading {
-    color: gold;
-    text-align: center;
+  }
+  
+  #enter_text {
+    width: 400px;
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
     font-size: 38px;
-    font-family: 'Cabin Condensed', sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.addBurger {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.krabbyPatty {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.moveMe {
-    text-align: center;
-    margin: 0 auto 3% 0;
-
-}
-
-
-.showBurger {
-    text-align: center;
-    font-size: 28px;
-    font-family: 'Cabin Condensed', sans-serif;
-}
-
-.devourBurger
-{
-    text-align: center;
-    font-size: 28px;
-    font-family: 'Cabin Condensed', sans-serif;
-
-}
-
-.btn {
-    padding-top: 0px;
-}
-
-p {
-    color: palegoldenrod;
-}
+  }
+  
+  .task {
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+  }
+  
+  .button-size {
+    padding-bottom: 20px;
+  }
+  
+  #text-enter-button {
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
+  
+  h1 {
+    color: #f30;
+  }
+  
